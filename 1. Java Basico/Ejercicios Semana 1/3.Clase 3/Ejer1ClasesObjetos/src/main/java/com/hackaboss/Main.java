@@ -17,22 +17,22 @@ public class Main {
         Electrodomestico electrodomestico3 = new Electrodomestico(180, 65, "Teka", "T680", "negro");
 
         System.out.println("El primer electrodoméstico: "
-                + ", Marca: " + electrodomestico1.getMarca()
+                + "Marca: " + electrodomestico1.getMarca()
                 + ", Modelo: " + electrodomestico1.getModelo()
                 + ", Consumo energético: " + electrodomestico1.getConsumo());
 
         System.out.println("El segundo electrodoméstico: "
-                + ", Marca: " + electrodomestico2.getMarca()
+                + "Marca: " + electrodomestico2.getMarca()
                 + ", Modelo: " + electrodomestico2.getModelo()
                 + ", Consumo energético: " + electrodomestico2.getConsumo());
 
         System.out.println("El tercer electrodoméstico: "
-                + ", Marca: " + electrodomestico3.getMarca()
+                + "Marca: " + electrodomestico3.getMarca()
                 + ", Modelo: " + electrodomestico3.getModelo()
                 + ", Consumo energético: " + electrodomestico3.getConsumo());
 
 
-        //En este caso va a imprimir null- ya que si a un String no se le asigna ningún valor por defecto va a ser null
+        //En este caso va a imprimir null- ya que si a un String u Objeto no se le asigna ningún valor por defecto va a ser null
         Electrodomestico electrodomestico4 = new Electrodomestico();
         System.out.println(electrodomestico4.getMarca());
 

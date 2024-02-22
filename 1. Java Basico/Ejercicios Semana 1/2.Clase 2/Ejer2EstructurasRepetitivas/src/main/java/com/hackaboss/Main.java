@@ -18,7 +18,7 @@ public class Main {
 
         System.out.println("Introducir los precios. Poner 0 para salir de la aplicación");
 
-        while(precioIncorrecto != true) {
+        while(!precioIncorrecto) {
             System.out.println("Introduzca un precio: ");
             precio = sc.nextDouble();
 
