@@ -41,5 +41,16 @@ public class Main {
 
         System.out.println("--------------------------------------");
 
+        //Mostrando verduras verdes
+        for(int i=0; i < verduras.length; i++) {
+            if(verduras[i].getColor().equalsIgnoreCase("verde")) {
+                System.out.println("id: " + verduras[i].getId() +
+                        ", Nombre: " + verduras[i].getNombre() +
+                        ", Color: " + verduras[i].getColor() +
+                        ", Calorías: " + verduras[i].getCalorias() +
+                        ", ¿Debe cocinarse?: " + verduras[i].getDebeCocinarse());
+            }
+        }
+
     }
 }
