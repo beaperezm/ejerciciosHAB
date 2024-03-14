@@ -1,49 +1,42 @@
 package com.hackaboss;
 
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
 
 
 
-        RegistroMascotas<Perro> registroPerro = new RegistroMascotas<>();
-        registroPerro.agregarMascota(new Perro(1, "Rayo", 5, "San Bernardo", "Marrón"));
-        registroPerro.agregarMascota(new Perro(2, "Peter", 7, "Caniche Toy", "Marrón"));
-        registroPerro.agregarMascota(new Perro(3, "Can", 9, "Bulldog francés", "Blanco y negro"));
-        registroPerro.agregarMascota(new Perro(4, "Beater", 12, "Beagle", "Marrón y blanco"));
-
-
-        RegistroMascotas<Gato> registroGato = new RegistroMascotas<>();
-        registroGato.agregarMascota(new Gato(5, "Blacky", 8, "Común", 6.00));
-        registroGato.agregarMascota(new Gato(6, "Luna", 6, "Persa", 7.00));
-        registroGato.agregarMascota(new Gato(7, "Lorenzo", 12, "Scottish Fold", 5.00));
-        registroGato.agregarMascota(new Gato(8, "Mister", 2, "Siamés", 5.00));
-
-
-        System.out.println("-------------------------------------");
-
-        int totalMascotas = registroGato.contarMascotas() + registroPerro.contarMascotas();
-        System.out.println("Hay registradas " + totalMascotas + " mascotas");
+        RegistroMascota<Mascota> registroMascota = new RegistroMascota<>();
+        registroMascota.agregarMascota(new Mascota(1, "Rayo", 5, "Perro"));
+        registroMascota.agregarMascota(new Mascota(2, "Peter", 7, "Perro"));
+        registroMascota.agregarMascota(new Mascota(3, "Can", 9, "Perro"));
+        registroMascota.agregarMascota(new Mascota(4, "Beater", 12, "Perro"));
+        registroMascota.agregarMascota(new Mascota(5, "Blacky", 8, "Gato"));
+        registroMascota.agregarMascota(new Mascota(6, "Luna", 6, "Gato"));
+        registroMascota.agregarMascota(new Mascota(7, "Lorenzo", 12, "Gato"));
+        registroMascota.agregarMascota(new Mascota(8, "Mister", 2, "Gato"));
+        registroMascota.agregarMascota(new Mascota(9, "Piolín", 3, "Ave"));
+        registroMascota.agregarMascota(new Mascota(10, "Parrot", 2, "Ave"));
+        System.out.println("Mascotas agregadas correctamente: " + registroMascota.toString()+"\n");
 
 
         System.out.println("-------------------------------------");
 
-         registroGato.buscarPorEspecie("Persa");
+        System.out.println("Hay registradas " + registroMascota.contarMascotas() + " mascotas");
 
-         registroPerro.buscarPorNombre("Peter");
+
+        System.out.println("------------------------------------------");
+
+
+        registroMascota.buscarPorEspecie("Gato");
+
+        System.out.println("-------------------------");
+        registroMascota.buscarPorNombre("Peter");
 
 
         System.out.println("-------------------------------------");
 
-        registroGato.edadesAleatorias("Lorenzo");
-
-
-
-
-
-
-
+        registroMascota.datosAleatorios(6);
+        System.out.println("Mascotas aleatorias agregadas correctamente");
 
 
 

@@ -1,12 +1,12 @@
 package com.hackaboss;
 
 public class Mascota<T> {
-    private T id;
-    private T nombre;
-    private T edad;
+    private int id;
+    private String nombre;
+    private int edad;
     private T especie;
 
-    public Mascota(T id, T nombre, T edad, T especie) {
+    public Mascota(int id, String nombre, int edad, T especie) {
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;
@@ -16,31 +16,31 @@ public Mascota() {
 
 }
 
-    public Mascota(T nombre) {
+    public Mascota(String nombre) {
         this.nombre = nombre;
     }
 
-    public T getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(T id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public T getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(T nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public T getEdad() {
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(T edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 
@@ -54,10 +54,10 @@ public Mascota() {
 
     @Override
     public String toString() {
-        return '{' +
+        return "\n{" +
                 "id=" + id +
                 ", nombre=" + nombre +
                 ", edad=" + edad +
-                ", especie=" + especie;
+                ", especie=" + especie + '}';
     }
 }
