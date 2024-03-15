@@ -19,6 +19,13 @@ public class Tarea {
         this.subsubtarea = new ArrayList<>();
     }
 
+    public Tarea(String tarea) {
+        this.tarea = tarea;
+        this.tareaPrincipal = new ArrayList<>();
+        this.subtarea = new ArrayList<>();
+        this.subsubtarea = new ArrayList<>();
+    }
+
     public Tarea() {
     }
 
@@ -61,6 +68,7 @@ public class Tarea {
     public void setTareaPrincipal(List<Tarea> tareaPrincipal) {
         this.tareaPrincipal = tareaPrincipal;
     }
+
 
     @Override
     public String toString() {
