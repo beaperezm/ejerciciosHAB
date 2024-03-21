@@ -1,9 +1,6 @@
-
 package com.test.ejercicio1votaciones.logica;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -49,12 +46,4 @@ public class Voto implements Serializable {
         this.partido = partido;
     }
     
-   /* public void contarVotos(int countA, int countB, int countC) {
-        List<Voto> voto = new ArrayList<>();
-        for(Voto v : voto) {
-            if(v.equals("partidoA")) countA++;
-            else if(v.equals("partidoB")) countB++;
-            else countC++;
-        }
-    }*/
 }
