@@ -1,0 +1,60 @@
+
+package com.test.ejercicio1votaciones.logica;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Voto implements Serializable {
+    
+    @Id
+    @GeneratedValue (strategy= GenerationType.IDENTITY)
+    private int id;
+    private String partido;
+
+
+    public Voto() {
+    }
+
+    public Voto(String partido) {
+        this.partido = partido;
+    }
+
+  
+    public Voto(int id, String partido) {
+        this.id = id;
+        this.partido = partido;
+      
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    
+    public String getPartido() {
+        return partido;
+    }
+
+    public void setPartido(String partido) {
+        this.partido = partido;
+    }
+    
+   /* public void contarVotos(int countA, int countB, int countC) {
+        List<Voto> voto = new ArrayList<>();
+        for(Voto v : voto) {
+            if(v.equals("partidoA")) countA++;
+            else if(v.equals("partidoB")) countB++;
+            else countC++;
+        }
+    }*/
+}
