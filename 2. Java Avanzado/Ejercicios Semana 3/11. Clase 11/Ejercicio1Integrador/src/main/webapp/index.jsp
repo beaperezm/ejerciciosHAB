@@ -107,7 +107,7 @@
                     <tbody> 
                  <%for (Partido partido : (List<Partido>) request.getAttribute("listaConPartidos")) { %>  
                              <tr>
-                            <td><%=partido.fechaFormateada() %></td>
+                            <td><%=partido.fechaFormateada2() %></td>
                             <td><%=partido.getEquipo1().getNombre() %></td>
                             <td><%=partido.getEquipo2().getNombre() %></td>
                             <td><%=partido.getResultadoEquipo1() %></td>

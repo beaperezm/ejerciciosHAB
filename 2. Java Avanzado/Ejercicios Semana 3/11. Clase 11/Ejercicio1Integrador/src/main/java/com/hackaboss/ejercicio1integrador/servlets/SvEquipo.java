@@ -46,7 +46,6 @@ public class SvEquipo extends HttpServlet {
         String ciudad = request.getParameter("ciudad");
         
         Equipo equipo = new Equipo();
-        equipo.setId(Integer.parseInt(id));
         equipo.setNombre(nombre);
         equipo.setCiudad(ciudad);
         

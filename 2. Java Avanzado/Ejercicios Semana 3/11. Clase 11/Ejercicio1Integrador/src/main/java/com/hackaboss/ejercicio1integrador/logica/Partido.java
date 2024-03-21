@@ -2,8 +2,8 @@
 package com.hackaboss.ejercicio1integrador.logica;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +16,7 @@ public class Partido implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_partido;
-    private Date fecha;
+    private LocalDate fecha;
     private int resultadoEquipo1;
     private int resultadoEquipo2;
     
@@ -29,7 +29,8 @@ public class Partido implements Serializable {
     public Partido() {
     }
 
-    public Partido(int id_partido, Date fecha, int resultadoEquipo1, int resultadoEquipo2, Equipo equipo1, Equipo equipo2) {
+
+    public Partido(int id_partido, LocalDate fecha, int resultadoEquipo1, int resultadoEquipo2, Equipo equipo1, Equipo equipo2) {
         this.id_partido = id_partido;
         this.fecha = fecha;
         this.resultadoEquipo1 = resultadoEquipo1;
@@ -37,21 +38,13 @@ public class Partido implements Serializable {
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
     }
-
+    
     public int getId_partido() {
         return id_partido;
     }
 
     public void setId_partido(int id_partido) {
         this.id_partido = id_partido;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
     }
 
     public int getResultadoEquipo1() {
@@ -85,13 +78,20 @@ public class Partido implements Serializable {
     public void setEquipo2(Equipo equipo2) {
         this.equipo2 = equipo2;
     }
-    
-    
-    public String fechaFormateada() {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        return sdf.format(fecha);
+
+    public LocalDate getFecha() {
+        return fecha;
     }
 
-  
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    
+   public String fechaFormateada2() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return formatter.format(fecha);
+    }
+    
 
 }
